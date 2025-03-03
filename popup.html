@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Slack Channel Colorizer</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: "Meiryo", "Hiragino Kaku Gothic Pro", "MS PGothic", "MS UI Gothic", Arial, sans-serif;
+    }
+    h2 {
+      margin-top: 0;
+      color: #4a154b;
+    }
+    .color-input {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+    .channel-input {
+      flex: 1;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px;
+      background-color: #4a154b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #611f69;
+    }
+    .remove-btn {
+      background-color: #e01e5a;
+      padding: 2px 6px;
+      margin-left: 5px;
+      font-size: 12px;
+    }
+    .remove-btn:hover {
+      background-color: #bc1649;
+    }
+    .footer {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h2>Slack Channel Colorizer</h2>
+  
+  <div id="colorSettings">
+    <div id="channelColors">
+      <!-- 動的に追加されるチャンネル色設定 -->
+    </div>
+    <button id="addChannel">チャンネルを追加</button>
+  </div>
+  
+  <button id="saveSettings">保存</button>
+  
+  <div class="footer">
+    <p>変更を適用するにはSlackページを再読み込みしてください。</p>
+    <p style="font-size: 11px; margin-top: 5px;">
+      チャンネルIDを入力してください。<br>
+      URLの最後の部分から確認できます:<br>
+      <code>https://app.slack.com/client/TXXXXXXXX/<mark></mark></code>
+    </p>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+/* Slackチャンネル色付けのためのカスタムCSS */
+
+/* ダークカラーの場合のテキスト色調整 */
+.dark-theme .c-message__sender,
+.dark-theme .c-message_kit__text,
+.dark-theme .p-channel_header__title,
+.dark-theme .c-message__body,
+.dark-theme .p-rich_text_block,
+.dark-theme .c-message_kit__blocks {
+  color: #f0f0f0 !important;
+}
+
+.dark-theme .c-message_kit__background {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* p-message_pane_inputのみを着色対象にする */
+.p-message_pane_input[data-colorized="true"] {
+  background-color: inherit !important;
+}
